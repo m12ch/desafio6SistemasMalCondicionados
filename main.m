@@ -36,9 +36,3 @@ title('Proyeccion en el plano XY');
 legend('Ecuacionn 1', 'Ecuacion 2', 'Ecuacion 3');
 hold off;
 
-disp('Solucion del sistema:')
-disp(x);
-disp('Determinante de A:')
-disp(det_a);
-disp('Condicion de A:')
-disp(cond_a);
