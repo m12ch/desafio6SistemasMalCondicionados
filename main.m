@@ -10,6 +10,7 @@
 #Si los coeficientes fueran exactos (como 2, 4, 6, y 9), las filas serían completamente dependientes, 
 #haciendo que la matriz sea singular (no invertible). En este caso, pequeñas perturbaciones en los valores, 
 #como 4.0001 y 9.0001, hacen que el sistema sea sensible a cambios en los coeficientes o en el vector b.
+disp('MARCELO ALVARO CHAMBI CHILLO')
 a = [1 2 3; 2 4.0001 6; 3 6 9.0001]
 b = [1; 2; 3]
 disp('descomposicion lu')
