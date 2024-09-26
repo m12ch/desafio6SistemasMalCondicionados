@@ -15,24 +15,16 @@ a = [1 2 3; 2 4.0001 6; 3 6 9.0001]
 b = [1; 2; 3]
 disp('descomposicion lu')
 [L, U] = lu(a)
-
-% Resolución del sistema
 y = L \ b
 disp('solucion del sistema')
 x = inv(a)*b
-
-% Cálculo del determinante y el número de condición
 disp('determinante A')
 det_a = det(a)
 disp('condicional A')
 cond_a = cond(a)
-
-% Definir las funciones de las proyecciones en el plano XY
 f1 = @(x1, x2) -(a(1,1)*x1 + a(1,2)*x2 - b(1))/a(1,3);
 f2 = @(x1, x2) -(a(2,1)*x1 + a(2,2)*x2 - b(2))/a(2,3);
 f3 = @(x1, x2) -(a(3,1)*x1 + a(3,2)*x2 - b(3))/a(3,3);
-
-% Graficar las funciones en el plano XY
 figure;
 hold on;
 fplot(@(x) f1(x, 0), [-5, 5]);  % Proyección de la primera ecuación
@@ -44,7 +36,6 @@ title('Proyeccion en el plano XY');
 legend('Ecuacionn 1', 'Ecuacion 2', 'Ecuacion 3');
 hold off;
 
-% Imprimir los resultados
 disp('Solucion del sistema:')
 disp(x);
 disp('Determinante de A:')
